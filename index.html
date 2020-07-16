@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            border: 1px solid violet;
+        }
+        h1 {
+            text-align: center;
+        }
+        h1.on {
+            border: 3px solid rebeccapurple;
+            transform: scale(2) rotateX(360deg);
+            transition: all 1s ease;
+        }
+        /* dropdown menu */
+        .dropdown {
+            text-align: center;
+        }
+        .dropdown > a {
+            border: 1px solid red;
+            width: 150px;
+            display: block;
+            text-decoration: none;
+            color: black;
+        }
+        .dropdown > ul {
+            border: 1px solid blue;
+            width: 150px;
+            visibility: hidden;
+            opacity: 0;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            height: 0;
+        }
+        .dropdown > ul.on {
+            -webkit-transition: all 1.5s ease;
+            transition: all 1.5s ease;
+            visibility: visible;
+            opacity: 1;
+            height: auto;
+        }
+
+        /*bar막대 만들기*/
+        .graph {
+            margin: 0 auto;
+            /* box-sizing: border-box;
+            width: 500px; */
+            width: 456px;
+            border: 2px solid black;
+            padding: 20px;
+        }
+
+        .graph > .bar + .bar {
+            margin-top: 15px;
+        }
+
+        .bar {
+            height: 35px;
+            /*height: 27px*/
+            /* margin-bottom: 15px; */
+            text-align: right;
+            padding-top: 8px;
+            padding-right: 10px;
+            box-sizing: border-box; /**/
+        }
+
+        .first {
+            width: 100%;
+            background-color: red;
+        }
+
+        .second {
+            width: 75%;
+            background-color: greenyellow;
+        }
+
+        .third {
+            width: 64%;
+            margin-bottom: 0;
+            background-color: orange;
+        }
+
+        .fourth {
+            width: 54%;
+            background-color: brown;
+        }
+
+        .y_and_o > a {
+            border: 1px solid black;
+            padding: 5px 20px;
+            text-decoration: none;
+            color: black;
+            line-height: 86px;
+        }
+
+        .y_and_o > p.old > span {
+            color: olive;
+        }
+        .y_and_o > p.young > span {
+            color: gold;
+        }
+
+        .gugu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .menu2 {
+            border: 4px solid cornflowerblue;
+            margin-bottom: 150px;
+            padding-left: 20px;
+        }
+
+        .manage {
+            margin-bottom: 200px;
+        }
+
+        .mother {
+            padding: 20px;
+            width: 270px;
+            border: 8px solid lightblue;
+            margin-bottom: 20px;
+        }
+
+        .mother > .photo {
+            float: left;
+            width: 100px;
+            height: 100px;
+            border: 8px solid lavender;
+        }
+
+        .mother > p {
+            border: 5px solid pink;
+            margin: 0;
+        }
+
+        /* .mother::after {
+            content: 'a';
+            display: block;
+            border: 5px solid cornflowerblue;
+            clear: left;
+        } */
+
+        .grandma {
+            border: 5px solid orchid;
+            padding: 20px;
+            width: 670px;
+        }
+
+        .mother.left {float: left;}
+        .mother.right {float: right;}
+
+        .bottom {border: 3px solid deeppink; clear: both;}
+
+    </style>
+</head>
+<body>
+    <div class="grandma">
+        <div class="mother left">
+            <div class="photo"></div>
+            <p>김치찌개 / 피자 / 라면 /</p>
+            <!-- <div class="lala"></div> -->
+        </div>
+        <div class="mother right">
+            <div class="photo"></div>
+            <p>김치찌개 / 피자 / 라면 /</p>
+            <!-- <div class="lala"></div> -->
+        </div>
+        <div class="bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse possimus ipsam dolores provident quisquam veniam, voluptate illo est vero tempore! Soluta sapiente cumque, totam quam odit dolorem laudantium laboriosam qui!</div>
+    </div>
+    <div class="menu2">
+        <p class="menu_list"></p>
+        <input type="text" >
+        <button>주문하기</button>
+        <p class="message"></p>
+    </div>
+    <div class="manage">
+        <p>추가할 메뉴를 입력하시오</p>
+        <input class="addName" type="text">
+        <input class="addPrice" type="text">
+        <button>추가하기</button>
+    </div>
+
+
+
+    <div class="menu"></div>
+    <div class="gugu">
+        <input type="text" />
+        <button>구구단시작</button>
+        <ul></ul>
+    </div>
+
+    <div class="y_and_o">
+        <a href="#">젊은지를 알려줄께</a>
+        <!-- <p id="text"></p> -->
+    </div>
+
+    <div class="graph">
+        <div class="bar first"><strong>1위</strong><span>100%</span></div>
+        <div class="bar second"><strong>2위</strong><span>75%</span></div>
+        <div class="bar fourth"><strong>4위</strong><span>54%</span></div>
+        <div class="bar third"><strong>3위</strong><span>64%</span></div>
+        
+    </div>
+
+    <h1 class="">좋은아침~</h1>
+    <div class="dropdown">
+        <a href="#">버튼</a>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+    <p class="before">안녕하세요</p>
+    <script src="index.js" type="text/javascript"></script>
+</body>
+</html>
